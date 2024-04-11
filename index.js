@@ -1,3 +1,4 @@
+let cors = require("cors");
 let express = require("express"); //step1:import express
 
 
@@ -5,14 +6,13 @@ let express = require("express"); //step1:import express
 let Port=5000 
 
 let app = express();
-let cors = require("cors");
 let http = require("http");
 let server = http.createServer(app); // step2:createServer by HTTP module and give the argument app
 
 let io = require("socket.io")(server, {
   cors: {
     origin: "*",
-  methods: ["POST","GET"]
+ 
   },
 }); //step3:import the socket.io and call and give argument server that was created above
 
