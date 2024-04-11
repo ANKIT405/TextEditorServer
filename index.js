@@ -12,6 +12,7 @@ let server = http.createServer(app); // step2:createServer by HTTP module and gi
 let io = require("socket.io")(server, {
   cors: {
     origin: "https://text-editor-client-feq3.vercel.app/",
+     methods: ["GET", "POST"]
  
   },
 }); //step3:import the socket.io and call and give argument server that was created above
