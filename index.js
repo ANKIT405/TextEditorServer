@@ -11,7 +11,7 @@ let server = http.createServer(app); // step2:createServer by HTTP module and gi
 
 let io = require("socket.io")(server, {
   cors: {
-    origin: "https://text-editor-client-feq3.vercel.app/",
+    origin: "https://teamviewer-clone.netlify.app/",
      methods: ["GET", "POST"]
  
   },
