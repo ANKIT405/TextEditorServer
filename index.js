@@ -11,7 +11,7 @@ let server = http.createServer(app); // step2:createServer by HTTP module and gi
 
 let io = require("socket.io")(server, {
   cors: {
-    origin: "http://localhost:3000",
+    origin: "*",
   methods: ["POST","GET"]
   },
 }); //step3:import the socket.io and call and give argument server that was created above
