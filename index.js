@@ -3,7 +3,7 @@ let express = require("express"); //step1:import express
 
 // let hostname=0.0.0.0
 
-let Port=https://text-editor-server.vercel.app/
+// let Port=https://text-editor-server.vercel.app/
 
 let app = express();
 let http = require("http");
@@ -55,6 +55,6 @@ app.route("/").get((req, res) => {
   res.send("SERVER");
 });
 
-server.listen(Port,() => {
+server.listen(() => {
   console.log("Server is listening at Port 5000");
 });
