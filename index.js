@@ -19,6 +19,12 @@ let io = require("socket.io")(server, {
 
 //let's connect the circuitðŸ”²
 io.on("connection", (Client) => {
+  const transport = Client.conn.transport.name;
+
+ socket.conn.on("upgrade", () => {
+    const upgradedTransport = Client.conn.transport.name;
+  });
+  
   Client.on("cursor", (pointerVal) => {
     Client.broadcast.emit("pointer", pointerVal);
   });
