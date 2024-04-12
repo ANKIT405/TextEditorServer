@@ -21,7 +21,7 @@ let io = require("socket.io")(server, {
 io.on("connection", (Client) => {
   const transport = Client.conn.transport.name;
 
- socket.conn.on("upgrade", () => {
+ Client.conn.on("upgrade", () => {
     const upgradedTransport = Client.conn.transport.name;
   });
   
