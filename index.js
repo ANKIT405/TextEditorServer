@@ -12,12 +12,13 @@ app.use(cors())
 let io = require("socket.io")(server, {
   cors: {
     origin: "https://autodesk-clone.netlify.app/",
-     methods: ["GET", "POST"]
+     methods: ["GET", "POST"],
+     credentials: true
  
   },
 }); //step3:import the socket.io and call and give argument server that was created above
 
-//let's connect the circuitðŸ”²
+//let's connect the circuit
 io.on("connection", (Client) => {
   const transport = Client.conn.transport.name;
 
