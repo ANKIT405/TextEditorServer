@@ -63,4 +63,4 @@ app.route("/").get((req, res) => {
   res.send("SERVER");
 });
 
-server.listen("https://text-editor-server.vercel.app");
+server.listen();
