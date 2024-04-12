@@ -8,7 +8,7 @@ let Port=5000
 let app = express();
 let http = require("http");
 let server = http.createServer(app); // step2:createServer by HTTP module and give the argument app
-
+app.use(cors())
 let io = require("socket.io")(server, {
   cors: {
     origin: "https://autodesk-clone.netlify.app/",
