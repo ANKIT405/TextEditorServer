@@ -1,9 +1,9 @@
 let cors = require("cors");
 let express = require("express"); //step1:import express
 
+let hostname=0.0.0.0
 
-
-let Port=5000 
+let Port=https://text-editor-server.vercel.app/
 
 let app = express();
 let http = require("http");
@@ -55,6 +55,6 @@ app.route("/").get((req, res) => {
   res.send("SERVER");
 });
 
-server.listen(Port, () => {
+server.listen(Port,hostname,() => {
   console.log("Server is listening at Port 5000");
 });
