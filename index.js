@@ -13,8 +13,8 @@ let io = require("socket.io")(server, {
   cors: {
     origin: "*",
      methods: ["GET", "POST"],
-    allowedHeaders: ["my-custom-header"],
-     credentials: true
+    headers: ["my-custom-header"],
+    
  
   },
 }); //step3:import the socket.io and call and give argument server that was created above
