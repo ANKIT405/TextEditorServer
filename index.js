@@ -11,7 +11,7 @@ let server = http.createServer(app); // step2:createServer by HTTP module and gi
 app.use(cors())
 let io = require("socket.io")(server, {
   cors: {
-    origin: "https://hero-editor.netlify.app",
+    origin: "https://online-note.netlify.app",
      methods: ["GET", "POST"],
     allowedHeaders: ["my-custom-header"],
      credentials: true
