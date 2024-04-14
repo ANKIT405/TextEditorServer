@@ -39,18 +39,18 @@ io.on("connection", (Client) => {
     Client.emit("mouseOut");
   });
 
-  Client.on("SettingText", () => {
-    Client.broadcast.emit("SetText");
+  Client.on("SettingText", (Get_Text) => {
+    Client.broadcast.emit("SetText",Get_Text);
   });
 
   Client.on("textSelect", (text) => {
-    io.emit("TextSelect", text);
+    Client.broadcast.emit("TextSelect", text);
   });
 
   Client.on("UserJoined", (UserName) => {
     io.emit("ID", UserName);
-    Client.on("MonitorText", () => {
-      io.emit("Monitor-text");
+    Client.on("MonitorText", (Editor) => {
+      Client.broadcast.emit("Monitor-text",Editor);
     });
   });
 
@@ -59,7 +59,7 @@ io.on("connection", (Client) => {
   });
 });
 
-app.route("/").get((req, res) => {
+app.route("/").get((req, res) => { 
   res.send("SERVER");
 });
 
